@@ -11,7 +11,7 @@ jobs:
         run: |
           mkdir -p payload/Applications
           ar x WeChat_3.8-7_Rootless_ipapark.com.deb payload/Applications
-          tar -xf data.tar.gz
+          tar -xf data.tar
           mkdir -p Payload/WeChat.app/Library/MobileSubstrate/DynamicLibraries && cp -r Library/MobileSubstrate/DynamicLibraries/* $_
           find payload/Applications -name "_CodeSignature" -type d | xargs rm -rf
           zip -r output.ipa Payload
