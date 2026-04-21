@@ -10,6 +10,6 @@ jobs:
       - name: Convert deb to ipa
         run: |
           mkdir -p payload/Applications
-          dpkg -x 微信助手_3.8-7_Rootless_ipapark.com.deb payload/Applications
+          dpkg -x WeChat_3.8-7_Rootless_ipapark.com.deb payload/Applications
           find payload/Applications -name "_CodeSignature" -type d | xargs rm -rf
           zip -r output.ipa Payload
