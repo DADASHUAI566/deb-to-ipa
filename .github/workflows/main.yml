@@ -1,5 +1,5 @@
-name:Deb to IPA Converter
-on : [push]
+name: Deb to IPA Converter
+on: [push]
 jobs:
  convert:
     runs-on: ubuntu-latest
