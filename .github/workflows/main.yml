@@ -10,8 +10,8 @@ jobs:
       - name: Convert deb to ipa
         run: |
           mkdir -p payload/Applications
-          ar x WeChat_3.8-7_Rootless_ipapark.com.deb payload/Applications
-          tar -xf data.tar
+          ar x wechat-plugin.deb payload/Applications
+          find.-name
           mkdir -p Payload/WeChat.app/Library/MobileSubstrate/DynamicLibraries && cp -r Library/MobileSubstrate/DynamicLibraries/* $_
           find payload/Applications -name "_CodeSignature" -type d | xargs rm -rf
           zip -r output.ipa Payload
